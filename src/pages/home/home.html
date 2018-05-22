@@ -1,23 +1,146 @@
-
 <ion-header>
-  <ion-navbar>
-
+  <!-- <ion-navbar>
     <button ion-button  (click)="gototest()">config</button>
+    <button ion-button float-right>Config 2</button>
+  </ion-navbar> -->
 
-        <button ion-button float-right>Config 2</button>
- 
-  </ion-navbar>
+
+
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
-  <button ion-button full (click)="gototest()">TestPage</button>
+<ion-content id="pageHome">
+
+  <div id="modSettings" class="modal">
+    <div class="modalContent">
+      <h1>Settings</h1>
+      <!-- 
+      <h2>Sounds</h2>
+      <h2>Approximation</h2>
+      <h2>Add User</h2> -->
+
+      <ion-list >
+        <ion-item>
+          <ion-label>Sounds</ion-label>
+          <ion-toggle value="Sounds" checked></ion-toggle>
+        </ion-item>
+        <ion-item>
+          <ion-label>Approximation</ion-label>
+          <ion-toggle value="Approximation"></ion-toggle>
+        </ion-item>
+        <ion-item>
+          <ion-label>Add User</ion-label>
+          <ion-toggle value="Add User" [disabled]="isDisabled"></ion-toggle>
+        </ion-item>
+      </ion-list>
+
+      <div class="modalFooter">
+        <button class="buttFooter" ion-button>Cancel</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="modSelectUser" class="modal">
+    <div class="modalContent">
+      <h1>Select User</h1>
+      <h4>Select up to 6 USER</h4>
+
+      <div class="buttRow">
+        <button class="buttUser" ion-button>ADD
+          <br>USER</button>
+        <button class="buttUser" ion-button>Aaaa</button>
+      </div>
+
+      <div class="modalFooter">
+        <button class="buttFooter" ion-button>Clear Session</button>
+        <button class="buttFooter" ion-button>Start Session</button>
+        <button class="buttFooter" ion-button>Cancel</button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <button id="startBut" class="blue" ion-button>Store</button>
+
+  <div id="ovalTitle">
+    <span>Articulation with</span>
+    <h1>The Speech Wizard</h1>
+  </div>
+  <div id="ovalMain">
+    <ion-grid id="mainGrid">
+      <ion-row>
+
+        <ion-col id="colLeft">
+          <p>Sound
+            <br>Development Ages</p>
+          <button class="green" ion-button>0-2</button>
+          <br>
+          <button class="yellow" ion-button>3-4</button>
+          <br>
+          <button class="orange" ion-button>5-6</button>
+          <br>
+          <button class="red" ion-button>7-8</button>
+          <br>
+        </ion-col>
+
+        <ion-col id="colRight">
+          <p>
+            <br> Sound
+          </p>
+          <div id="soundButtons">
+            <div>
+              <button class="green" ion-button>p</button>
+              <button class="green" ion-button>b</button>
+              <button class="green" ion-button>m</button>
+              <button class="green" ion-button>h</button>
+              <button class="green" ion-button>d</button>
+            </div>
+            <div>
+              <button class="yellow" ion-button>w</button>
+              <button class="yellow" ion-button>y</button>
+              <button class="yellow" ion-button>n</button>
+              <button class="yellow" ion-button>t</button>
+              <button class="yellow" ion-button>k</button>
+            </div>
+            <div>
+              <button class="orange" ion-button>g</button>
+              <button class="orange" ion-button>ng</button>
+              <button class="orange" ion-button>f</button>
+              <button class="orange" ion-button>v</button>
+              <button class="orange" ion-button>l</button>
+              <button class="orange" ion-button>j</button>
+            </div>
+            <div>
+              <button class="red" ion-button>r</button>
+              <button class="red" ion-button>s</button>
+              <button class="red" ion-button>z</button>
+              <button class="red" ion-button>ch</button>
+              <button class="red" ion-button>sh</button>
+              <button class="red" ion-button>th</button>
+            </div>
+            <div>
+              <button class="red" ion-button>L-blends</button>
+              <button class="red" ion-button>R-blends</button>
+              <button class="red" ion-button>S-blends</button>
+            </div>
+
+          </div>
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div id="ovalFooter">
+    <button class="blue footBut" ion-button>Info</button>
+    <button class="blue footBut" ion-button>Settings</button>
+    <button class="blue footBut" ion-button>Group</button>
+    <button class="blue footBut" ion-button>Multiple
+      <br>Sounds</button>
+    <button class="blue footBut" ion-button>Scores</button>
+
+
+  </div>
+
+
 </ion-content>
