@@ -10,9 +10,18 @@ import { Platform } from 'ionic-angular';
 export class HomePage {
 
   constructor(public navCtrl: NavController) {
-
+    setTimeout(() => {
+    //document.getElementById("splash").style.display = "none";
+   // document.getElementById("content").style.display = "block";
+    }, 1000);
   }
-  gototest(){
+
+
+  gotoHomeHelpPage(){
+    this.navCtrl.push(TestPage)
+  }
+
+  gotoHomeSettingPage(){
     this.navCtrl.push(TestPage)
   }
 }
